@@ -1,11 +1,12 @@
 const skillGroups = [
   { category: 'Languages', items: ['Python', 'JavaScript', 'SQL', 'Bash'] },
-  { category: 'Frontend', items: ['React.js', 'HTML5', 'CSS3', 'WebSockets', 'Recharts/D3.js', 'Responsive Design'] },
-  { category: 'Backend', items: ['FastAPI', 'Flask', 'REST APIs', 'JWT Auth', 'Role-Based Access Control'] },
-  { category: 'Database', items: ['SQLite', 'PostgreSQL', 'Schema Design', 'CRUD Operations'] },
-  { category: 'Networking & Security', items: ['SSH', 'Nmap', 'iptables', 'Wireshark', 'Packet Analysis', 'Vulnerability Assessment'] },
-  { category: 'System & OS', items: ['Linux', 'psutil', 'subprocess', 'S.M.A.R.T Monitoring', 'Bash Scripting'] },
-  { category: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'Postman', 'SMTP', 'PDF Generation'] },
+  { category: 'Frontend', items: ['HTML5', 'CSS3', 'React.js (Beginner)', 'Responsive Design'] },
+  { category: 'Backend', items: ['Flask', 'REST APIs', 'FastAPI (Learning)'] },
+  { category: 'Database', items: ['SQLite', 'CRUD Operations'] },
+  { category: 'Networking & Security', items: ['Nmap', 'Wireshark', 'Basic Vulnerability Assessment'] },
+  { category: 'System & OS', items: ['Linux', 'Bash Scripting', 'psutil'] },
+  { category: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'Postman'] },
+  { category: 'Soft Skills', items: ['Analytical Thinking', 'Continuous Learning', 'Problem Solving', 'Team Collaboration', 'Adaptability'] },
 ]
 
 export default function Skills() {
