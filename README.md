@@ -158,7 +158,7 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Run on Mobile (same WiFi)
+### Run on Mobile (same WiFi) 
 
 ```bash
 npm run dev
@@ -169,7 +169,7 @@ Open the **Network URL** shown in terminal (e.g. `http://192.168.x.x:5173`) on y
 
 ```bash
 npm run build
-```
+``` 
 
 Output goes to the `dist/` folder — ready to deploy.
 
