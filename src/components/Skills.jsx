@@ -1,12 +1,13 @@
 const skillGroups = [
   { category: 'Languages', items: ['Python', 'JavaScript', 'SQL', 'Bash'] },
-  { category: 'Frontend', items: ['HTML5', 'CSS3', 'React.js (Beginner)', 'Responsive Design'] },
-  { category: 'Backend', items: ['Flask', 'REST APIs', 'FastAPI (Learning)'] },
-  { category: 'Database', items: ['SQLite', 'CRUD Operations'] },
-  { category: 'Networking & Security', items: ['Nmap', 'Wireshark', 'Basic Vulnerability Assessment'] },
-  { category: 'System & OS', items: ['Linux', 'Bash Scripting', 'psutil'] },
-  { category: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'Postman'] },
-  { category: 'Soft Skills', items: ['Analytical Thinking', 'Continuous Learning', 'Problem Solving', 'Team Collaboration', 'Adaptability'] },
+  { category: 'Frontend', items: ['React.js', 'HTML5', 'CSS3', 'WebSockets', 'Responsive Design'] },
+  { category: 'Backend', items: ['FastAPI', 'Flask', 'REST APIs', 'JWT Auth', 'RBAC'] },
+  { category: 'Database', items: ['SQLite', 'PostgreSQL', 'Schema Design'] },
+  { category: 'Networking & Security', items: ['iptables', 'SSH', 'Nmap', 'Wireshark'] },
+  { category: 'System & OS', items: ['Linux', 'Bash Scripting', 'psutil', 'subprocess', 'S.M.A.R.T Monitoring'] },
+  { category: 'Desktop', items: ['PyQt5', 'pyqtgraph', 'PyInstaller'] },
+  { category: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'Postman', 'SMTP', 'PDF Generation', 'Paramiko'] },
+  { category: 'Soft Skills', items: ['Analytical Thinking', 'Problem Solving', 'Continuous Learning', 'Team Collaboration'] },
 ]
 
 export default function Skills() {
