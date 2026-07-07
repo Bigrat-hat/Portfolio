@@ -217,4 +217,4 @@ Live at: `https://bigrat-hat.github.io/portfolio/`
 
 ---
 
-© 2025 Aditya Chaturvedi. Built with React.js
+© 2026 Aditya Chaturvedi. Built with React.js
