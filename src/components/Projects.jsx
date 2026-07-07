@@ -13,15 +13,7 @@ const mainProjects = [
     description:
       'A complete internal HR platform covering employee attendance tracking, leave management with approval workflows, automated payroll calculation with PDF payslips, and digital employee onboarding with document management.',
     tech: ['React', 'FastAPI', 'Python', 'SQLite', 'JWT', 'RBAC', 'PDF Generation', 'File Upload'],
-    github: 'https://github.com/Bigrat-hat/hr-management-system',
-  },
-  {
-    title: 'WFH Management & Tracking System',
-    type: 'Web Dashboard (Different Network)',
-    description:
-      'A remote workforce management platform with real-time active/idle detection, daily check-in/out tracking, task logging, automated payroll hours calculation, and email alerts for late check-ins — built for Indian SMEs managing remote teams.',
-    tech: ['React', 'FastAPI', 'Python', 'SQLite', 'WebSockets', 'psutil', 'SMTP', 'JWT'],
-    github: 'https://github.com/Bigrat-hat/wfh-tracker',
+    github: 'https://github.com/Bigrat-hat/HRsystem',
   },
   {
     title: 'SysWatch — Personal System Monitor',
@@ -29,7 +21,7 @@ const mainProjects = [
     description:
       'A lightweight desktop application that monitors everything running on your system in real time — processes, background services, CPU/RAM usage, battery drain analysis, temperature with overheat alerts, fan status indicator, network activity per app, and local running servers — with one-click kill and shutdown controls. Packaged as a standalone app using PyInstaller.',
     tech: ['Python', 'PyQt5', 'psutil', 'SQLite', 'pyqtgraph', 'subprocess', 'PyInstaller'],
-    github: 'https://github.com/Bigrat-hat/syswatch',
+    github: 'https://github.com/Bigrat-hat/SysWatch',
   },
   {
     title: 'Personal Portfolio Website',

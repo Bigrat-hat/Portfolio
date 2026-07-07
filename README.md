@@ -86,13 +86,12 @@ Skills grouped by category:
 - Class X — CMA Higher Secondary School, Satna (2020)
 
 ### Projects
-Five real-world projects:
+Four real-world projects:
 
 1. **Network Control Panel** — React, Flask, Python, Bash, Linux, iptables, psutil
 2. **Remote Server Manager** — React, FastAPI, Python, Paramiko, WebSockets, JWT
-3. **WFH Management & Tracking System** — React, FastAPI, Python, SQLite, WebSockets, SMTP
-4. **Remote System Intelligence Platform** — React, FastAPI, Python, psutil, Paramiko, PDF Export
-5. **Personal Portfolio Website** — React.js, HTML, CSS, JavaScript, Git, GitHub
+3. **Remote System Intelligence Platform** — React, FastAPI, Python, psutil, Paramiko, PDF Export
+4. **Personal Portfolio Website** — React.js, HTML, CSS, JavaScript, Git, GitHub
 
 ### Contact
 - Email, phone, location, LinkedIn, GitHub
