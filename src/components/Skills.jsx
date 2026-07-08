@@ -1,141 +1,113 @@
-import { useEffect, useRef, useState } from 'react'
-
 const skillGroups = [
   {
     category: 'Languages',
-    isBar: true,
     items: [
-      { name: 'Python', value: 90 },
-      { name: 'JavaScript', value: 85 },
-      { name: 'SQL', value: 80 },
-      { name: 'Bash', value: 85 },
+      { name: 'Python', level: 'Advanced' },
+      { name: 'JavaScript', level: 'Advanced' },
+      { name: 'SQL', level: 'Intermediate' },
+      { name: 'Bash', level: 'Advanced' },
     ],
   },
   {
     category: 'Frontend',
-    isBar: true,
     items: [
-      { name: 'React.js', value: 85 },
-      { name: 'Tailwind CSS', value: 80 },
-      { name: 'HTML5', value: 90 },
-      { name: 'CSS3', value: 85 },
-      { name: 'WebSockets', value: 80 },
-      { name: 'Responsive Design', value: 90 },
+      { name: 'React.js', level: 'Advanced' },
+      { name: 'Tailwind CSS', level: 'Intermediate' },
+      { name: 'HTML5', level: 'Advanced' },
+      { name: 'CSS3', level: 'Advanced' },
+      { name: 'WebSockets', level: 'Intermediate' },
+      { name: 'Responsive Design', level: 'Advanced' },
     ],
   },
   {
     category: 'Backend',
-    isBar: true,
     items: [
-      { name: 'FastAPI', value: 90 },
-      { name: 'Flask', value: 85 },
-      { name: 'REST APIs', value: 90 },
-      { name: 'JWT Auth', value: 85 },
-      { name: 'RBAC', value: 80 },
-      { name: 'SQLAlchemy', value: 85 },
-      { name: 'reportlab', value: 80 },
+      { name: 'FastAPI', level: 'Advanced' },
+      { name: 'Flask', level: 'Advanced' },
+      { name: 'REST APIs', level: 'Advanced' },
+      { name: 'JWT Auth', level: 'Advanced' },
+      { name: 'RBAC', level: 'Intermediate' },
+      { name: 'SQLAlchemy', level: 'Advanced' },
+      { name: 'reportlab', level: 'Intermediate' },
     ],
   },
   {
     category: 'Database',
-    isBar: true,
     items: [
-      { name: 'SQLite', value: 85 },
-      { name: 'PostgreSQL', value: 80 },
-      { name: 'Schema Design', value: 85 },
+      { name: 'SQLite', level: 'Advanced' },
+      { name: 'PostgreSQL', level: 'Intermediate' },
+      { name: 'Schema Design', level: 'Advanced' },
     ],
   },
   {
     category: 'Networking & Security',
-    isBar: true,
     items: [
-      { name: 'iptables', value: 80 },
-      { name: 'SSH', value: 85 },
-      { name: 'Nmap', value: 75 },
-      { name: 'Wireshark', value: 75 },
-      { name: 'Vulnerability Assessment', value: 70 },
+      { name: 'iptables', level: 'Intermediate' },
+      { name: 'SSH', level: 'Advanced' },
+      { name: 'Nmap', level: 'Familiar' },
+      { name: 'Wireshark', level: 'Familiar' },
+      { name: 'Vulnerability Assessment', level: 'Familiar' },
     ],
   },
   {
     category: 'System & OS',
-    isBar: true,
     items: [
-      { name: 'Linux', value: 90 },
-      { name: 'Bash Scripting', value: 85 },
-      { name: 'psutil', value: 85 },
-      { name: 'subprocess', value: 80 },
-      { name: 'S.M.A.R.T Monitoring', value: 80 },
+      { name: 'Linux', level: 'Advanced' },
+      { name: 'Bash Scripting', level: 'Advanced' },
+      { name: 'psutil', level: 'Advanced' },
+      { name: 'subprocess', level: 'Intermediate' },
+      { name: 'S.M.A.R.T Monitoring', level: 'Intermediate' },
     ],
   },
   {
     category: 'Desktop',
-    isBar: true,
     items: [
-      { name: 'PyQt5', value: 85 },
-      { name: 'PySide6', value: 80 },
-      { name: 'pyqtgraph', value: 80 },
-      { name: 'PyInstaller', value: 85 },
+      { name: 'PyQt5', level: 'Advanced' },
+      { name: 'PySide6', level: 'Intermediate' },
+      { name: 'pyqtgraph', level: 'Intermediate' },
+      { name: 'PyInstaller', level: 'Advanced' },
     ],
   },
   {
     category: 'Tools',
-    isBar: true,
     items: [
-      { name: 'Git', value: 85 },
-      { name: 'GitHub', value: 90 },
-      { name: 'VS Code', value: 90 },
-      { name: 'SMTP', value: 80 },
-      { name: 'PDF Generation', value: 85 },
-      { name: 'Paramiko', value: 85 },
+      { name: 'Git', level: 'Advanced' },
+      { name: 'GitHub', level: 'Advanced' },
+      { name: 'VS Code', level: 'Advanced' },
+      { name: 'SMTP', level: 'Intermediate' },
+      { name: 'PDF Generation', level: 'Advanced' },
+      { name: 'Paramiko', level: 'Advanced' },
     ],
   },
   {
     category: 'Soft Skills',
-    isBar: false,
-    items: ['Analytical Thinking', 'Problem Solving', 'Continuous Learning', 'Team Collaboration', 'Adaptability'],
+    items: [
+      { name: 'Analytical Thinking' },
+      { name: 'Problem Solving' },
+      { name: 'Continuous Learning' },
+      { name: 'Team Collaboration' },
+      { name: 'Adaptability' },
+    ],
   },
   {
     category: 'Currently Learning',
-    isBar: false,
-    items: ['☁️ Cloud Computing (AWS Fundamentals)', '🖥️ Linux Server Administration', '🐳 Docker & Containerization'],
+    items: [
+      { name: 'Cloud Computing (AWS)', level: 'Currently Learning' },
+      { name: 'Linux Server Admin', level: 'Currently Learning' },
+      { name: 'Docker & Containers', level: 'Currently Learning' },
+    ],
   },
 ]
 
-function SkillBar({ name, proficiency }) {
-  const [width, setWidth] = useState(0)
-  const barRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setWidth(proficiency)
-          observer.unobserve(entry.target)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (barRef.current) {
-      observer.observe(barRef.current)
-    }
-
-    return () => {
-      if (barRef.current) {
-        observer.unobserve(barRef.current)
-      }
-    }
-  }, [proficiency])
-
+function SkillPill({ name, level }) {
   return (
-    <div className="skill-item" ref={barRef}>
-      <div className="skill-info">
-        <span className="skill-name">{name}</span>
-        <span className="skill-percent">{proficiency}%</span>
-      </div>
-      <div className="skill-bar-bg">
-        <div className="skill-bar-fill" style={{ width: `${width}%` }} />
-      </div>
+    <div className="skill-pill">
+      <span className="skill-name">{name}</span>
+      {level && (
+        <span className={`skill-badge badge-${level.toLowerCase().replace(/\s+/g, '-')}`}>
+          {level}
+        </span>
+      )}
     </div>
   )
 }
@@ -145,22 +117,14 @@ export default function Skills() {
     <section id="skills" className="section">
       <h2 className="section-title">Skills</h2>
       <div className="skills-categories">
-        {skillGroups.map(group => (
+        {skillGroups.map((group) => (
           <div key={group.category} className="skill-group">
             <h3 className="skill-category">{group.category}</h3>
-            {group.isBar ? (
-              <div className="skills-bars-grid">
-                {group.items.map(skill => (
-                  <SkillBar key={skill.name} name={skill.name} proficiency={skill.value} />
-                ))}
-              </div>
-            ) : (
-              <div className="skills-grid">
-                {group.items.map(skill => (
-                  <span key={skill} className="skill-badge">{skill}</span>
-                ))}
-              </div>
-            )}
+            <div className="skills-grid">
+              {group.items.map((skill) => (
+                <SkillPill key={skill.name} name={skill.name} level={skill.level} />
+              ))}
+            </div>
           </div>
         ))}
       </div>
