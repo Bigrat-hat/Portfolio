@@ -51,29 +51,33 @@ export default function Hero() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-accent/20 rounded-full blur-[100px]"></div>
           <div className="absolute top-1/2 left-1/2 translate-x-10 -translate-y-20 w-64 h-64 bg-secondary/20 rounded-full blur-[100px]"></div>
           
-          <div className="relative w-80 h-96 glass-card border border-borderGlass/10 flex items-center justify-center group">
-            {/* If user uploads a photo later, we can place it here. For now, a premium abstract placeholder */}
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-2xl"></div>
-            <div className="text-center relative z-10 p-6">
-              <div className="w-20 h-20 mx-auto rounded-full bg-background border border-borderGlass/20 flex items-center justify-center mb-4 neon-glow">
-                <span className="text-2xl font-heading font-bold text-gradient">AC</span>
+          {/* Wrapper for Card and Badges to prevent backdrop-filter clipping */}
+          <div className="relative w-80 h-96 group">
+            
+            {/* The actual Glass Card */}
+            <div className="absolute inset-0 glass-card border border-borderGlass/10 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-2xl"></div>
+              <div className="text-center relative z-10 p-6">
+                <div className="w-20 h-20 mx-auto rounded-full bg-background border border-borderGlass/20 flex items-center justify-center mb-4 neon-glow">
+                  <span className="text-2xl font-heading font-bold text-gradient">AC</span>
+                </div>
+                <h3 className="text-lg font-bold text-textMain mb-1">Full Stack Developer</h3>
+                <p className="text-sm text-textMuted">Bridging software & infrastructure.</p>
               </div>
-              <h3 className="text-lg font-bold text-textMain mb-1">Full Stack Developer</h3>
-              <p className="text-sm text-textMuted">Bridging software & infrastructure.</p>
             </div>
             
             {/* Floating tech badges */}
             <motion.div 
               animate={{ y: [0, -10, 0] }} 
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              className="absolute top-10 -left-6 glass px-3 py-2 rounded-xl text-xs font-medium text-textMain flex items-center gap-2"
+              className="absolute top-10 -left-6 z-20 glass px-3 py-2 rounded-xl text-xs font-medium text-textMain flex items-center gap-2"
             >
               <div className="w-2 h-2 rounded-full bg-green-400"></div> Python
             </motion.div>
             <motion.div 
               animate={{ y: [0, 15, 0] }} 
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-20 -right-8 glass px-3 py-2 rounded-xl text-xs font-medium text-textMain flex items-center gap-2"
+              className="absolute bottom-20 -right-8 z-20 glass px-3 py-2 rounded-xl text-xs font-medium text-textMain flex items-center gap-2"
             >
               <div className="w-2 h-2 rounded-full bg-blue-400"></div> React
             </motion.div>
