@@ -3,7 +3,7 @@ import { LuArrowRight as ArrowRight, LuDownload as Download, LuMail as Mail } fr
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-[100dvh] flex items-center pt-12 md:pt-20">
+    <section id="home" className="min-h-[100dvh] flex items-start lg:items-center pt-28 lg:pt-20">
       <div className="w-full grid lg:grid-cols-2 gap-12 items-center">
         
         {/* Left Content */}
