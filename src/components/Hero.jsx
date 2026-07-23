@@ -51,9 +51,9 @@ export default function Hero() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-accent/20 rounded-full blur-[100px]"></div>
           <div className="absolute top-1/2 left-1/2 translate-x-10 -translate-y-20 w-64 h-64 bg-secondary/20 rounded-full blur-[100px]"></div>
           
-          <div className="relative w-80 h-96 glass-card border border-borderGlass/10 overflow-hidden flex items-center justify-center group">
+          <div className="relative w-80 h-96 glass-card border border-borderGlass/10 flex items-center justify-center group">
             {/* If user uploads a photo later, we can place it here. For now, a premium abstract placeholder */}
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-secondary/10"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-2xl"></div>
             <div className="text-center z-10 p-6">
               <div className="w-20 h-20 mx-auto rounded-full bg-background border border-borderGlass/20 flex items-center justify-center mb-4 neon-glow">
                 <span className="text-2xl font-heading font-bold text-gradient">AC</span>
