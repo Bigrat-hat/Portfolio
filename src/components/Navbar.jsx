@@ -29,7 +29,9 @@ export default function Navbar({ theme, toggleTheme }) {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'py-3 glass' : 'py-5 bg-transparent'
+        scrolled 
+          ? 'pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] glass' 
+          : 'pb-5 pt-[max(1.25rem,env(safe-area-inset-top))] bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
