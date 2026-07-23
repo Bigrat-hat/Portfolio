@@ -1,74 +1,63 @@
-import { useState, useEffect } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Skills from './components/Skills'
-import Education from './components/Education'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import ScrollReveal from './components/ScrollReveal'
+import { useEffect, useState } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
-  const [scrollProgress, setScrollProgress] = useState(0)
-  const [showBackToTop, setShowBackToTop] = useState(false)
+  const [loading, setLoading] = useState(true);
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
-    // Scroll listeners
-    const handleScroll = () => {
-      // Scroll progress
-      const totalScroll = document.documentElement.scrollHeight - window.innerHeight
-      if (totalScroll > 0) {
-        setScrollProgress((window.scrollY / totalScroll) * 100)
-      }
+    // Simulate loading screen for premium feel
+    setTimeout(() => setLoading(false), 1200);
+  }, []);
 
-      // Back to top button visibility
-      if (window.scrollY > 400) {
-        setShowBackToTop(true)
-      } else {
-        setShowBackToTop(false)
-      }
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
+  }, [theme]);
 
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  const toggleTheme = () => {
+    console.log("Toggle Theme clicked! Current theme:", theme);
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
+  if (loading) {
+    return (
+      <div className="h-screen w-full flex items-center justify-center bg-background">
+        <div className="relative flex items-center justify-center">
+          <div className="w-16 h-16 border-4 border-borderGlass/10 border-t-accent rounded-full animate-spin"></div>
+          <div className="absolute text-xl font-heading font-bold text-textMain tracking-widest">
+            A<span className="text-accent">.</span>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="fade-in-reveal">
-      <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
-      <Navbar />
-      <main>
-        <ScrollReveal>
-          <Hero />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Skills />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Education />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Projects />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Contact />
-        </ScrollReveal>
+    <div className="relative min-h-screen bg-background overflow-hidden selection:bg-accent/30 selection:text-textMain">
+      <div className="particles"></div>
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      
+      <main className="max-w-7xl mx-auto px-6 lg:px-8">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
       </main>
+      
       <Footer />
-      {showBackToTop && (
-        <button className="back-to-top" onClick={scrollToTop} aria-label="Back to top">
-          ↑
-        </button>
-      )}
     </div>
-  )
+  );
 }
