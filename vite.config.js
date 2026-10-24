@@ -37,8 +37,8 @@ export default defineConfig({
       }
     })
   ],
-  // Local development and Vercel both serve this app from the site root.
-  base: '/',
+  // GitHub Pages project site URLs use /Portfolio/ as the base path.
+  base: '/Portfolio/',
   server: {
     host: true,
   },
