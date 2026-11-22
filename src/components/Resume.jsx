@@ -82,14 +82,14 @@ export default function Resume() {
                   <div className="timeline-dot">2026<br/>2024</div>
                   <div className="timeline-content">
                     <h4>INFRAGUARD PLATFORM</h4>
-                    <p>Lead Developer - Full Stack</p>
+                    <p>Lead Systems & Cloud Developer</p>
                   </div>
                 </div>
                 <div className="timeline-item">
                   <div className="timeline-dot">2025<br/>2024</div>
                   <div className="timeline-content">
                     <h4>HR MANAGEMENT SYSTEM</h4>
-                    <p>Developer - Full Stack Dashboard</p>
+                    <p>Backend & Web Developer</p>
                   </div>
                 </div>
                 <div className="timeline-item">
@@ -121,7 +121,7 @@ export default function Resume() {
             <div>
               <h3 className="resume-heading">WHAT CAN I DO ?</h3>
               <p className="simple-list">
-                Full-Stack Web Development<br/>
+                Cloud Infrastructure & AWS Deployment<br/>
                 Remote Server Management (SSH, Paramiko)<br/>
                 Network Monitoring & Security<br/>
                 Linux Administration & Bash Scripting<br/>

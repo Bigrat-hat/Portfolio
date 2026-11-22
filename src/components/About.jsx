@@ -41,15 +41,18 @@ export default function About() {
           
           <div className="space-y-6 text-textMuted leading-relaxed md:text-lg md:leading-loose">
             <p>
-              I am a recent B.Tech graduate in <span className="text-textMain font-medium">Electronics and Communication Engineering (ECE)</span>, with a strong interest in <span className="text-accent font-medium">Linux systems, cloud infrastructure, automation, and networking</span>. I enjoy working close to the system level — managing servers, writing automation scripts, and building tools that monitor and secure infrastructure.
+              Recent B.Tech graduate in <span className="text-textMain font-medium">Electronics and Communication Engineering (ECE)</span> with a strong foundation in <span className="text-accent font-medium">networking, Linux system administration, and infrastructure automation</span>.
             </p>
             <p>
-              Through personal projects, I have built infrastructure monitoring dashboards, remote server management tools, and system utilities using <span className="text-textMain font-medium">Python, Bash, and Linux</span>. I have hands-on experience with SSH-based automation, system monitoring, and backend services using FastAPI, while continuously deepening my knowledge of Linux administration, networking fundamentals, and cloud platforms.
+              Hands-on with network connectivity, remote server access, and system monitoring, with working knowledge of <span className="text-textMain font-medium">VPN, DHCP, subnetting, firewall rules</span>, and <span className="text-accent font-medium">SSH-based remote administration</span>.
+            </p>
+            <p>
+              Built and published open-source projects covering network monitoring dashboards, remote server management platforms, and a self-hosted WireGuard VPN on AWS.
             </p>
             <div className="p-6 md:p-8 bg-bgGlass/5 rounded-2xl border border-borderGlass/10 relative overflow-hidden mt-8 shadow-inner">
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-accent to-secondary"></div>
               <p className="text-textMain font-medium italic">
-                "I am a continuous learner working toward becoming a <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary font-bold not-italic">DevOps/Cloud Engineer</span> — someone who bridges development and operations by automating deployment, managing infrastructure, and keeping systems reliable, secure, and efficient."
+                "Continuous learner dedicated to bridging <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary font-bold not-italic">networking, Linux systems, and cloud infrastructure</span> — building automated, reliable, and secure infrastructure."
               </p>
             </div>
           </div>
@@ -62,28 +65,29 @@ export default function About() {
           viewport={{ once: true }}
           variants={fadeIn}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-6"
         >
           {/* Quick Facts */}
-          <div className="glass-card p-8 flex-1">
-            <h4 className="text-lg font-bold text-textMain mb-6">Quick Facts</h4>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-textMuted">
-                <MapPin size={18} className="text-secondary" />
-                <span>Bhopal, India</span>
+          <div className="glass-card p-6">
+            <h4 className="text-lg font-bold text-textMain mb-4">Quick Facts</h4>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-textMuted text-sm">
+                <MapPin size={18} className="text-secondary shrink-0" />
+                <span>Bhopal, Madhya Pradesh</span>
               </li>
-              <li className="flex items-center gap-3 text-textMuted">
-                <Code2 size={18} className="text-secondary" />
-                <span>DevOps & Full Stack</span>
+              <li className="flex items-center gap-3 text-textMuted text-sm">
+                <Code2 size={18} className="text-secondary shrink-0" />
+                <span>Networking, Linux & Cloud DevOps</span>
+              </li>
+              <li className="flex items-center gap-3 text-textMuted text-sm">
+                <GraduationCap size={18} className="text-secondary shrink-0" />
+                <span>B.Tech ECE (CGPA: 7.2)</span>
               </li>
             </ul>
           </div>
 
-          {/* Education */}
-          <div className="glass-card p-8 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-              <GraduationCap size={100} />
-            </div>
+          {/* Education Timeline */}
+          <div className="glass-card p-6 relative overflow-hidden group flex-1">
             <div className="flex items-center gap-3 mb-6 relative z-10">
               <div className="p-2 bg-secondary/10 text-secondary rounded-lg">
                 <GraduationCap size={20} />
@@ -91,10 +95,25 @@ export default function About() {
               <h4 className="text-lg font-bold text-textMain">Education</h4>
             </div>
             
-            <div className="relative z-10">
-              <span className="text-xs font-bold tracking-wider text-accent uppercase mb-1 block">2022 - 2026</span>
-              <h5 className="text-textMain font-medium mb-2">B.Tech in Electronics & Communication</h5>
-              <p className="text-sm text-textMuted">Technocrats Institute of Technology (Science), Bhopal</p>
+            <div className="relative z-10 space-y-5">
+              <div className="border-l-2 border-accent/40 pl-4 py-0.5">
+                <span className="text-xs font-bold tracking-wider text-accent uppercase block">2022 – 2026</span>
+                <h5 className="text-textMain font-semibold text-sm">B.Tech — Electronics & Communication</h5>
+                <p className="text-xs text-textMuted">Technocrats Institute of Technology (Science), Bhopal</p>
+                <span className="inline-block mt-1 text-[11px] font-medium px-2 py-0.5 rounded bg-accent/10 text-accent">CGPA: 7.2</span>
+              </div>
+
+              <div className="border-l-2 border-secondary/40 pl-4 py-0.5">
+                <span className="text-xs font-bold tracking-wider text-secondary uppercase block">2022</span>
+                <h5 className="text-textMain font-semibold text-sm">Senior Secondary (Class XII, CBSE)</h5>
+                <p className="text-xs text-textMuted">CMA Higher Secondary School, Satna</p>
+              </div>
+
+              <div className="border-l-2 border-borderGlass/30 pl-4 py-0.5">
+                <span className="text-xs font-bold tracking-wider text-textMuted uppercase block">2020</span>
+                <h5 className="text-textMain font-semibold text-sm">Secondary (Class X, CBSE)</h5>
+                <p className="text-xs text-textMuted">CMA Higher Secondary School, Satna</p>
+              </div>
             </div>
           </div>
         </motion.div>

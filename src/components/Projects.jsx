@@ -4,23 +4,62 @@ import { LuGithub as Github, LuExternalLink as ExternalLink, LuMaximize2 as Maxi
 
 const mainProjects = [
   {
-    title: 'InfraGuard — Unified Infrastructure Control Platform',
+    title: 'InfraGuard — Network Security & Remote Infrastructure Monitoring Platform',
     type: 'Web Dashboard',
-    category: 'Cybersecurity',
+    category: 'Networking & Security',
     description: 'A unified infrastructure control platform combining network security (IP blocking via iptables), remote server management (SSH terminal + file manager), and predictive system health monitoring with S.M.A.R.T disk analysis and PDF health reports.',
-    tech: ['React', 'FastAPI', 'Python', 'Paramiko', 'WebSockets', 'iptables', 'psutil', 'JWT'],
-    github: 'https://github.com/Bigrat-hat/infraguard',
-    image: '/infraguard_network.png?v=2',
+    tech: ['React.js', 'FastAPI', 'Paramiko', 'WebSockets', 'iptables', 'psutil', 'JWT'],
+    github: 'https://github.com/Bigrat-hat/InfraGuard',
+    image: '/infraguard_network.png',
     screenshots: [
-      { src: '/infraguard_network.png?v=2', title: 'Network Monitor' },
-      { src: '/infraguard_1.png?v=2', title: 'Login Portal' },
-      { src: '/infraguard_2.png?v=2', title: 'Resource Trend' }
+      { src: '/infraguard_network.png', title: 'Network Security & Traffic Monitor' },
+      { src: '/infraguard_1.png', title: 'Authentication & Security Portal' },
+      { src: '/infraguard_2.png', title: 'Live System Health & Resource Trend' }
+    ]
+  },
+  {
+    title: 'NetWatch — Cross-Platform Network Monitoring Dashboard',
+    type: 'Web Dashboard',
+    category: 'Networking & Security',
+    description: 'A lightweight network monitoring dashboard for local infrastructure (routers, switches, cameras, NVRs, biometric devices) with live ping tracking, cross-platform OS detection, and low CPU overhead via async concurrent checks.',
+    tech: ['Python', 'FastAPI', 'asyncio', 'React', 'Vite', 'SQLite', 'SMTP'],
+    github: 'https://github.com/Bigrat-hat/NetWatch',
+    image: '/syswatch_network_1.png',
+    screenshots: [
+      { src: '/syswatch_network_1.png', title: 'Live Ping Tracking & Device Discovery' },
+      { src: '/syswatch_network_2.png', title: 'Subnet & Open Port Detection' },
+      { src: '/syswatch_network_3.png', title: 'Uptime History & Downtime Alerts' }
+    ]
+  },
+  {
+    title: 'Self-Hosted VPN — Private Network Access with Per-Device Keys',
+    type: 'Cloud Infrastructure',
+    category: 'Cloud & DevOps',
+    description: 'Deployed a self-hosted WireGuard VPN on AWS EC2 that lets devices from any location join a private network using pre-shared credentials and communicate as if on the same local network, with per-device key pairs and iptables routing.',
+    tech: ['WireGuard', 'AWS EC2', 'Linux', 'iptables', 'Python', 'Networking'],
+    github: 'https://github.com/Bigrat-hat/Hosted-VPN',
+    image: '/infraguard_6.png',
+    screenshots: [
+      { src: '/infraguard_6.png', title: 'WireGuard Tunnel & Routing Architecture' }
+    ]
+  },
+  {
+    title: 'Personal Portfolio Website — Developer Showcase',
+    type: 'Web Application',
+    category: 'Cloud & Web',
+    description: 'Developed a responsive portfolio website with reusable React components for navigation, projects, skills, and contact sections, applying component-based architecture for improved maintainability and scalability.',
+    tech: ['React.js', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Vite', 'Git'],
+    github: 'https://github.com/Bigrat-hat/Portfolio',
+    image: '/portfolio_preview.png',
+    screenshots: [
+      { src: '/portfolio_preview.png', title: 'Portfolio Showcase' },
+      { src: '/portfolio_screenshot.png', title: 'Interactive Sections & Navigation' }
     ]
   },
   {
     title: 'HR Management System',
     type: 'Web Dashboard',
-    category: 'Web',
+    category: 'Web & Backend',
     description: 'A complete internal HR platform covering employee attendance tracking, leave management with approval workflows, automated payroll calculation with PDF payslips, and digital employee onboarding with document management.',
     tech: ['React', 'FastAPI', 'Python', 'SQLite', 'JWT', 'RBAC'],
     github: 'https://github.com/Bigrat-hat/HRsystem',
@@ -35,7 +74,7 @@ const mainProjects = [
     type: 'Desktop Application',
     category: 'Python',
     description: 'A lightweight desktop application that monitors everything running on your system in real time — processes, background services, CPU/RAM usage, network activity per app, and local running servers — with one-click kill controls.',
-    tech: ['Python', 'PyQt5', 'psutil', 'SQLite', 'pyqtgraph', 'PyInstaller'],
+    tech: ['Python', 'PyQt5', 'psutil', 'SQLite', 'pyqtgraph'],
     github: 'https://github.com/Bigrat-hat/SysWatch',
     image: '/syswatch_dashboard.png',
     screenshots: [
@@ -46,9 +85,9 @@ const mainProjects = [
   {
     title: 'PDF Toolkit — Secure PDF Suite',
     type: 'Web Application',
-    category: 'Web',
+    category: 'Web & Backend',
     description: 'A comprehensive suite of PDF tools designed for absolute privacy. Features include converting images to PDF, merging documents, encrypting files with bank-grade AES security, and unlocking protected documents.',
-    tech: ['React', 'Node.js', 'PDF Processing', 'Security'],
+    tech: ['React', 'Node.js', 'PDF Processing', 'AES Security'],
     github: 'https://github.com/Bigrat-hat/pdf-toolkit',
     image: '/pdf_toolkit_10.png',
     screenshots: [
@@ -58,7 +97,7 @@ const mainProjects = [
   }
 ];
 
-const categories = ['All', 'Web', 'Cybersecurity', 'Python'];
+const categories = ['All', 'Networking & Security', 'Cloud & DevOps', 'Web & Backend', 'Python'];
 
 export default function Projects() {
   const [filter, setFilter] = useState('All');

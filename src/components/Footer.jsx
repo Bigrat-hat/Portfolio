@@ -22,7 +22,7 @@ export default function Footer() {
           <a href="https://github.com/Bigrat-hat" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center text-textMuted hover:text-textMain hover:bg-bgGlass/10 transition-colors">
             <Github size={18} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center text-textMuted hover:text-textMain hover:bg-bgGlass/10 transition-colors">
+          <a href="https://www.linkedin.com/in/aditya-chaturvedii-/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center text-textMuted hover:text-textMain hover:bg-bgGlass/10 transition-colors">
             <Linkedin size={18} />
           </a>
         </div>

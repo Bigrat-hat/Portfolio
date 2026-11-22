@@ -12,7 +12,7 @@ export default defineConfig({
       manifest: {
         name: 'Aditya | Portfolio',
         short_name: 'Aditya Portfolio',
-        description: 'Aspiring DevOps Engineer & Full Stack Developer',
+        description: 'Aspiring Cloud & DevOps Engineer | Networking, Linux & AWS Infrastructure',
         theme_color: '#050816',
         background_color: '#050816',
         display: 'standalone',
@@ -37,8 +37,8 @@ export default defineConfig({
       }
     })
   ],
-  // GitHub Pages project site URLs use /Portfolio/ as the base path.
-  base: '/Portfolio/',
+  // Use '/Portfolio/' base in production for GitHub Pages, and '/' for local development
+  base: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/',
   server: {
     host: true,
   },

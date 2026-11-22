@@ -1,48 +1,56 @@
 import { motion } from 'framer-motion';
-import { LuCode as Code, LuLayoutDashboard as Layout, LuDatabase as Database, LuServer as Server, LuShield as Shield, LuCloud as Cloud, LuTerminal as Terminal } from 'react-icons/lu';
+import { 
+  LuNetwork as Network, 
+  LuTerminal as Terminal, 
+  LuCloud as Cloud, 
+  LuCode as Code, 
+  LuLayoutDashboard as Layout, 
+  LuWrench as Wrench, 
+  LuUsers as Users 
+} from 'react-icons/lu';
 
 const skillCategories = [
   {
-    title: 'DevOps & Infrastructure',
+    title: 'Networking & Security',
+    icon: <Network size={20} />,
+    color: 'from-blue-600 to-indigo-600',
+    skills: ['VPN', 'Subnetting', 'DHCP', 'Firewall Rules', 'IP Addressing', 'SSH', 'Nmap', 'GNS3', 'Cisco Packet Tracer', 'WireGuard']
+  },
+  {
+    title: 'Linux & DevOps',
+    icon: <Terminal size={20} />,
+    color: 'from-emerald-500 to-teal-600',
+    skills: ['Linux Administration', 'Bash Scripting', 'System Monitoring', 'Automation', 'SSH Remote Access', 'iptables']
+  },
+  {
+    title: 'Cloud Fundamentals (AWS)',
     icon: <Cloud size={20} />,
-    color: 'from-red-500 to-rose-600',
-    skills: ['Linux Administration', 'Bash Scripting', 'SSH', 'Networking Fundamentals', 'Cloud Fundamentals (AWS)']
+    color: 'from-amber-500 to-orange-600',
+    skills: ['AWS EC2', 'AWS S3', 'AWS RDS', 'AWS Lambda', 'AWS VPC', 'AWS CloudWatch', 'AWS IAM']
   },
   {
     title: 'Languages',
     icon: <Code size={20} />,
-    color: 'from-blue-500 to-cyan-400',
-    skills: ['Python', 'JavaScript', 'SQL', 'Bash']
+    color: 'from-cyan-500 to-blue-500',
+    skills: ['Python', 'JavaScript', 'Bash', 'SQL (PostgreSQL, SQLite)']
   },
   {
-    title: 'Backend',
-    icon: <Server size={20} />,
-    color: 'from-green-500 to-emerald-400',
-    skills: ['FastAPI', 'Node.js', 'Express.js']
-  },
-  {
-    title: 'Database',
-    icon: <Database size={20} />,
-    color: 'from-yellow-500 to-orange-400',
-    skills: ['SQLite', 'MongoDB']
-  },
-  {
-    title: 'Full Stack',
-    icon: <Code size={20} />,
-    color: 'from-purple-500 to-indigo-400',
-    skills: ['MERN Stack (MongoDB, Express, React, Node.js)']
-  },
-  {
-    title: 'Frontend',
+    title: 'Frontend & Backend',
     icon: <Layout size={20} />,
-    color: 'from-pink-500 to-rose-400',
-    skills: ['React', 'HTML5', 'CSS3']
+    color: 'from-purple-500 to-pink-500',
+    skills: ['React.js', 'FastAPI', 'HTML5', 'CSS3', 'Tailwind CSS', 'WebSockets', 'SMTP', 'Paramiko', 'CRUD Operations']
   },
   {
-    title: 'Tools & Others',
-    icon: <Terminal size={20} />,
-    color: 'from-sky-500 to-blue-600',
-    skills: ['Git/GitHub', 'Paramiko', 'JWT', 'WebSockets']
+    title: 'Tools & Security Analysis',
+    icon: <Wrench size={20} />,
+    color: 'from-rose-500 to-red-600',
+    skills: ['Git', 'GitHub', 'VS Code', 'Wireshark', 'Burp Suite', 'Netdata']
+  },
+  {
+    title: 'Soft Skills',
+    icon: <Users size={20} />,
+    color: 'from-violet-500 to-purple-600',
+    skills: ['Analytical Thinking', 'Continuous Learning', 'Problem Solving', 'Team Collaboration', 'Adaptability']
   }
 ];
 

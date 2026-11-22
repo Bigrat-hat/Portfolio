@@ -20,10 +20,10 @@ export default function Hero() {
               <span className="text-gradient">Aditya Chaturvedi.</span>
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-textMuted mt-4">
-              <span className="text-accent">Aspiring DevOps Engineer</span> & <span className="text-textMain">Full Stack Developer</span>
+              <span className="text-accent">Network, Cloud</span> & <span className="text-textMain">Linux Administrator</span>
             </h2>
             <p className="text-base text-textMuted max-w-lg mt-6 leading-relaxed">
-              Specializing in scalable web applications, robust backend systems, networking, and cybersecurity. I build intelligent solutions bridging software and infrastructure.
+              Recent B.Tech graduate in ECE specializing in networking, Linux system administration, and infrastructure automation. Hands-on with VPNs, remote server access, firewall rules, and scalable monitoring dashboards.
             </p>
           </div>
 
@@ -31,6 +31,11 @@ export default function Hero() {
             <a href="#projects" className="group relative px-6 py-3 rounded-full bg-accent text-white font-medium flex items-center gap-2 transition-all hover:bg-secondary hover:shadow-[0_0_20px_rgba(124,92,255,0.4)]">
               View Projects
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </a>
+
+            <a href="/aditya-CV.pdf" download="Aditya_Chaturvedi_Resume.pdf" className="px-6 py-3 rounded-full glass border border-borderGlass/10 text-textMain font-medium flex items-center gap-2 hover:bg-bgGlass/10 transition-colors">
+              <Download size={18} className="text-accent" />
+              Download CV
             </a>
             
             <a href="#contact" className="px-6 py-3 rounded-full glass border border-borderGlass/10 text-textMain font-medium flex items-center gap-2 hover:bg-bgGlass/10 transition-colors">
@@ -61,8 +66,8 @@ export default function Hero() {
                 <div className="w-20 h-20 mx-auto rounded-full bg-background border border-borderGlass/20 flex items-center justify-center mb-4 neon-glow">
                   <span className="text-2xl font-heading font-bold text-gradient">AC</span>
                 </div>
-                <h3 className="text-lg font-bold text-textMain mb-1">Full Stack Developer</h3>
-                <p className="text-sm text-textMuted">Bridging software & infrastructure.</p>
+                <h3 className="text-lg font-bold text-textMain mb-1">Cloud & DevOps</h3>
+                <p className="text-sm text-textMuted">Linux • AWS Cloud • Networking • Automation</p>
               </div>
             </div>
             
@@ -70,16 +75,23 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, -10, 0] }} 
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              className="absolute top-10 -left-6 z-20 glass px-3 py-2 rounded-xl text-xs font-medium text-textMain flex items-center gap-2"
+              className="absolute top-8 -left-6 z-20 glass px-3 py-2 rounded-xl text-xs font-medium text-textMain flex items-center gap-2"
             >
-              <div className="w-2 h-2 rounded-full bg-green-400"></div> Python
+              <div className="w-2 h-2 rounded-full bg-emerald-400"></div> WireGuard / VPN
             </motion.div>
             <motion.div 
               animate={{ y: [0, 15, 0] }} 
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-20 -right-8 z-20 glass px-3 py-2 rounded-xl text-xs font-medium text-textMain flex items-center gap-2"
+              className="absolute bottom-16 -right-8 z-20 glass px-3 py-2 rounded-xl text-xs font-medium text-textMain flex items-center gap-2"
             >
-              <div className="w-2 h-2 rounded-full bg-blue-400"></div> React
+              <div className="w-2 h-2 rounded-full bg-blue-400"></div> AWS EC2 & Cloud
+            </motion.div>
+            <motion.div 
+              animate={{ y: [0, -8, 0] }} 
+              transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 0.5 }}
+              className="absolute -bottom-4 left-8 z-20 glass px-3 py-2 rounded-xl text-xs font-medium text-textMain flex items-center gap-2"
+            >
+              <div className="w-2 h-2 rounded-full bg-purple-400"></div> Linux & Automation
             </motion.div>
           </div>
         </motion.div>

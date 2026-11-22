@@ -63,7 +63,7 @@ export default function Navbar({ theme, toggleTheme }) {
           <a href="https://github.com/Bigrat-hat" target="_blank" rel="noreferrer" className="text-textMuted hover:text-textMain transition-colors">
             <Github size={20} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-textMuted hover:text-textMain transition-colors">
+          <a href="https://www.linkedin.com/in/aditya-chaturvedii-/" target="_blank" rel="noreferrer" className="text-textMuted hover:text-textMain transition-colors">
             <Linkedin size={20} />
           </a>
         </div>

@@ -11,7 +11,9 @@ const Footer = React.lazy(() => import('./components/Footer'));
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark';
+  });
   const [loadingText, setLoadingText] = useState('');
   const fullText = "Initializing system...";
 
@@ -43,6 +45,7 @@ export default function App() {
     } else {
       document.documentElement.classList.remove('dark');
     }
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

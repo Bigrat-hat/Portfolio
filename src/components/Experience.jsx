@@ -4,24 +4,31 @@ import { LuBriefcase as Briefcase, LuCalendar as Calendar } from 'react-icons/lu
 const experiences = [
   {
     id: 1,
-    role: 'InfraGuard — Infrastructure Monitoring & Automation',
+    role: 'InfraGuard — Network Security & Remote Infrastructure Platform',
     company: 'INFRAGUARD PLATFORM',
     period: '2024 - 2026',
-    description: 'Architected and developed a unified infrastructure control platform. Integrated network security, remote server management via SSH, and predictive system health monitoring using Python and React.',
+    description: 'Architected and developed a unified infrastructure dashboard for network security and remote server management. Featured IP blocking with iptables, live bandwidth monitoring, browser-based SSH terminal and SFTP file manager using Paramiko, and S.M.A.R.T disk analysis.',
   },
   {
     id: 2,
-    role: 'HR Management System — Backend Development',
-    company: 'HR MANAGEMENT SYSTEM',
-    period: '2024 - 2025',
-    description: 'Built a comprehensive HR platform covering attendance, leave management, and automated payroll with PDF payslip generation using FastAPI, React, and SQLite.',
+    role: 'NetWatch — Cross-Platform Network Monitoring Dashboard',
+    company: 'NETWATCH PLATFORM',
+    period: '2025 - 2026',
+    description: 'Built a lightweight network monitoring dashboard for local infrastructure (routers, switches, cameras, NVRs, biometrics) with live ping tracking, cross-platform OS detection, subnet auto-discovery, port scanning, and automated SMTP email alerts.',
   },
   {
     id: 3,
-    role: 'PDF Toolkit — Full-Stack Development',
-    company: 'PDF TOOLKIT',
-    period: '2026',
-    description: 'Created a secure, zero-tracking suite of PDF tools for image conversion, merging, and bank-grade AES encryption with immediate data deletion protocols.',
+    role: 'Self-Hosted VPN — Private Network Access with Per-Device Keys',
+    company: 'AWS & WIREGUARD',
+    period: '2025 - 2026',
+    description: 'Deployed a self-hosted WireGuard VPN on AWS EC2 allowing devices from any location to join a private network. Configured per-device key pairs, pre-shared key layer, Linux IP forwarding, and iptables firewall rules for secure routing and easy device revocation.',
+  },
+  {
+    id: 4,
+    role: 'HR Management System — Backend & Web Development',
+    company: 'HR MANAGEMENT SYSTEM',
+    period: '2024 - 2025',
+    description: 'Built a comprehensive internal HR platform covering attendance, leave workflows with approval mechanisms, automated payroll calculation with PDF payslip generation, and role-based access control using FastAPI, React, and SQLite.',
   }
 ];
 
