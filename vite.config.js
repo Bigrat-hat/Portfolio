@@ -41,5 +41,6 @@ export default defineConfig({
   base: process.env.GITHUB_PAGES === 'true' ? '/Portfolio/' : '/',
   server: {
     host: true,
+    allowedHosts: ['sb-6gs8r8eibik4.vercel.run'],
   },
 })
