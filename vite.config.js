@@ -37,8 +37,8 @@ export default defineConfig({
       }
     })
   ],
-  // Use '/Portfolio/' base in production for GitHub Pages, and '/' for local development
-  base: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/',
+  // Use the repository subpath only for GitHub Pages; other hosts serve from '/'.
+  base: process.env.GITHUB_PAGES === 'true' ? '/Portfolio/' : '/',
   server: {
     host: true,
   },

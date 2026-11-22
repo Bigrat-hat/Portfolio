@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LuGithub as Github, LuExternalLink as ExternalLink, LuMaximize2 as Maximize2, LuX as X, LuChevronRight as ChevronRight, LuChevronLeft as ChevronLeft } from 'react-icons/lu';
 
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 const mainProjects = [
   {
     title: 'InfraGuard — Network Security & Remote Infrastructure Monitoring Platform',
@@ -155,7 +157,7 @@ export default function Projects() {
               <div className="relative h-64 overflow-hidden bg-black">
                 <div className="absolute inset-0 bg-accent/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none mix-blend-overlay"></div>
                 <img 
-                  src={project.image} 
+                  src={publicAsset(project.image)}
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" 
                 />
@@ -226,7 +228,7 @@ export default function Projects() {
               className="relative max-w-6xl w-full"
             >
               <img 
-                src={activeGallery[currentImgIndex].src} 
+                src={publicAsset(activeGallery[currentImgIndex].src)}
                 alt={activeGallery[currentImgIndex].title} 
                 className="w-full max-h-[80vh] object-contain rounded-xl border border-borderGlass/10 shadow-2xl" 
               />
