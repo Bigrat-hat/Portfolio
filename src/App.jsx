@@ -12,7 +12,7 @@ const Footer = React.lazy(() => import('./components/Footer'));
 export default function App() {
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'dark';
+    return localStorage.getItem('theme') || 'light';
   });
   const [loadingText, setLoadingText] = useState('');
   const fullText = "Initializing system...";

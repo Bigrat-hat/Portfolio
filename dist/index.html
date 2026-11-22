@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Aditya | Portfolio</title>
     <meta name="description" content="Aspiring Cloud & DevOps Engineer | Networking, Linux & AWS Infrastructure" />
-    <meta name="theme-color" content="#050816" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="icon" type="image/svg+xml" href="/Portfolio/favicon.svg" />
     <link rel="apple-touch-icon" href="/Portfolio/pwa-192x192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/Portfolio/assets/index-f4c81926.js"></script>
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/Portfolio/assets/index-198b9544.js"></script>
     <link rel="stylesheet" href="/Portfolio/assets/index-ec59e8a0.css">
   <link rel="manifest" href="/Portfolio/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/Portfolio/registerSW.js"></script></head>
   <body>

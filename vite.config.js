@@ -13,8 +13,8 @@ export default defineConfig({
         name: 'Aditya | Portfolio',
         short_name: 'Aditya Portfolio',
         description: 'Aspiring Cloud & DevOps Engineer | Networking, Linux & AWS Infrastructure',
-        theme_color: '#050816',
-        background_color: '#050816',
+        theme_color: '#ffffff',
+        background_color: '#ffffff',
         display: 'standalone',
         icons: [
           {
