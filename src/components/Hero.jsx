@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { LuArrowRight as ArrowRight, LuDownload as Download, LuMail as Mail } from 'react-icons/lu';
 
 export default function Hero() {
+  const resumeUrl = `${import.meta.env.BASE_URL}aditya-CV.pdf`;
   return (
     <section id="home" className="min-h-[100dvh] flex items-center pt-12 md:pt-20">
       <div className="w-full grid lg:grid-cols-2 gap-12 items-center">
@@ -33,7 +34,7 @@ export default function Hero() {
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
 
-            <a href="/aditya-CV.pdf" download="Aditya_Chaturvedi_Resume.pdf" className="px-6 py-3 rounded-full glass border border-borderGlass/10 text-textMain font-medium flex items-center gap-2 hover:bg-bgGlass/10 transition-colors">
+            <a href={resumeUrl} download="Aditya_Chaturvedi_Resume.pdf" className="px-6 py-3 rounded-full glass border border-borderGlass/10 text-textMain font-medium flex items-center gap-2 hover:bg-bgGlass/10 transition-colors">
               <Download size={18} className="text-accent" />
               Download CV
             </a>
